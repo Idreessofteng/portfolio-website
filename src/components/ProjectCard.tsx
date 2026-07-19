@@ -32,7 +32,7 @@ export default function ProjectCard({
         style={{ scale }}
         className="relative w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] border-2 border-mist bg-ink p-4 sm:p-6 md:p-8"
       >
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+        <div className="flex flex-wrap items-start justify-between gap-4 mb-8">
           <div className="flex items-center gap-4 sm:gap-6">
             <span className="text-mist font-black" style={{ fontSize: 'clamp(2rem, 6vw, 90px)' }}>
               {project.number}
@@ -46,9 +46,33 @@ export default function ProjectCard({
               </h3>
             </div>
           </div>
-          <span className="inline-flex items-center rounded-full border-2 border-mist text-mist font-medium uppercase tracking-widest px-6 py-2 text-xs sm:text-sm whitespace-nowrap">
-            {project.stack}
-          </span>
+
+          <div className="flex flex-col items-end gap-3">
+            <span className="inline-flex items-center rounded-full border-2 border-mist text-mist font-medium uppercase tracking-widest px-6 py-2 text-xs sm:text-sm whitespace-nowrap">
+              {project.stack}
+            </span>
+            <div className="flex items-center gap-3">
+              <a
+                href={project.codeUrl || '#'}
+                target={project.codeUrl ? '_blank' : undefined}
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-mist/20 text-mist font-medium text-xs sm:text-sm px-5 py-2.5 hover:bg-white/15 transition-colors"
+                title={project.codeUrl ? 'View source code' : 'Add your GitHub link in content.ts'}
+              >
+                <Github size={15} /> Code
+              </a>
+              <a
+                href={project.demoUrl || '#'}
+                target={project.demoUrl ? '_blank' : undefined}
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full text-white font-medium text-xs sm:text-sm px-5 py-2.5 transition-opacity hover:opacity-90"
+                style={{ background: '#2563EB' }}
+                title={project.demoUrl ? 'View live demo' : 'Add your demo link in content.ts'}
+              >
+                <ExternalLink size={15} /> Demo
+              </a>
+            </div>
+          </div>
         </div>
 
         <div
@@ -57,28 +81,6 @@ export default function ProjectCard({
         >
           <Code2 className="text-mist/50" size={40} />
           <p className="text-mist/70 max-w-md text-sm sm:text-base leading-relaxed">{project.description}</p>
-        </div>
-
-        <div className="flex items-center gap-3 mt-5 sm:mt-6">
-          <a
-            href={project.codeUrl || '#'}
-            target={project.codeUrl ? '_blank' : undefined}
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-white/10 border border-mist/20 text-mist font-medium text-xs sm:text-sm px-5 py-2.5 hover:bg-white/15 transition-colors"
-            title={project.codeUrl ? 'View source code' : 'Add your GitHub link in content.ts'}
-          >
-            <Github size={15} /> Code
-          </a>
-          <a
-            href={project.demoUrl || '#'}
-            target={project.demoUrl ? '_blank' : undefined}
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 rounded-full text-white font-medium text-xs sm:text-sm px-5 py-2.5 transition-opacity hover:opacity-90"
-            style={{ background: '#2563EB' }}
-            title={project.demoUrl ? 'View live demo' : 'Add your demo link in content.ts'}
-          >
-            <ExternalLink size={15} /> Demo
-          </a>
         </div>
       </motion.div>
     </div>
