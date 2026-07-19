@@ -115,8 +115,8 @@ export const projects = [
     name: 'Personal Portfolio Website',
     stack: 'HTML · CSS · JavaScript',
     description: 'A responsive portfolio website built with modern CSS techniques.',
-    codeUrl: '',
-    demoUrl: '',
+    codeUrl: 'https://github.com/Idreessofteng/portfolio-website',
+    demoUrl: 'https://portfolio-website-mu-drab-62.vercel.app',
   },
   {
     number: '03',
