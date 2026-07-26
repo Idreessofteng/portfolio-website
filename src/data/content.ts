@@ -102,15 +102,6 @@ export const services = [
 export const projects = [
   {
     number: '01',
-    category: 'Academic Project',
-    name: 'Student Management System',
-    stack: 'C++ · OOP',
-    description: 'A student record management system built with object-oriented programming, file handling, and modular coding practices.',
-    codeUrl: '', // add your GitHub repo link here
-    demoUrl: '', // add a live/video demo link here (leave blank if none)
-  },
-  {
-    number: '02',
     category: 'Personal Project',
     name: 'Personal Portfolio Website',
     stack: 'HTML · CSS · JavaScript',
@@ -119,7 +110,7 @@ export const projects = [
     demoUrl: 'https://portfolio-website-mu-drab-62.vercel.app',
   },
   {
-    number: '03',
+    number: '02',
     category: 'DSA Project',
     name: 'Shortest Route Finder',
     stack: "C++ · Dijkstra's Algorithm",
@@ -127,11 +118,26 @@ export const projects = [
     codeUrl: '',
     demoUrl: '',
   },
+  {
+    number: '03',
+    category: 'AI/ML Project',
+    name: 'AI Resume Analyzer',
+    // Stack guessed based on the project name -- adjust in content.ts if it's built differently.
+    stack: 'Python · AI/NLP',
+    description: 'A tool that analyzes resumes using AI to help evaluate and improve them.',
+    codeUrl: 'https://github.com/Idreessofteng/ai-resume-analyzer',
+    demoUrl: 'https://ai-resume-analyzer-psi-wine.vercel.app',
+  },
 ]
 
 export const certifications = [
   {
-    title: 'Certificate in AI & Machine Learning',
+    title: 'Certificate in Artificial Intelligence',
+    issuer: 'Add issuing organization',
+    date: 'Add date',
+  },
+  {
+    title: 'Certificate in Cloud Computing',
     issuer: 'Add issuing organization',
     date: 'Add date',
   },
